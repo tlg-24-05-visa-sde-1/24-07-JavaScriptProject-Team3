@@ -1,4 +1,4 @@
-// main JS file in module
+
 import { initTranslation, translateText } from './translation.js';  // Import translation functions. D.W
 
 // Add event listener to the translate button. D.W
