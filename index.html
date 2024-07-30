@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <div id="translation" class="card">
+        <h2>Translate Text</h2>
+        <div class="translation-container">
+            <div class="translation-box">
+                <label for="from-language-select">From</label>
+                <select id="from-language-select">
+                    <option value="auto">Auto-detect</option>
+                </select>
+                <textarea id="translate-input" placeholder="Enter text to translate"></textarea>
+            </div>
+            <div class="translation-box">
+                <label for="to-language-select">To</label>
+                <select id="to-language-select"></select>
+                <textarea id="translated-output" readonly></textarea>
+            </div>
+        </div>
+        <button id="translate-button">Translate</button>
+    </div>
     <script type="module" src="./modules/main.js"></script>
 </body>
 </html>
