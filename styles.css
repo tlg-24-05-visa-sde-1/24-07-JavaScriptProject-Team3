@@ -19,7 +19,24 @@
 
 
 
-
+/* Food Styles */
+.food-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(to right, #cce5ff, #d4edda); /* Light blue to green gradient */
+}
+#recipeImage {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    display: none;
+    border-radius: 8px;
+}
 
 /* Header Styles */
 .header .logo {
@@ -30,7 +47,6 @@
     background: linear-gradient(90deg, #007bff, #00c853);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .header .navbar-brand {
     display: flex;
     align-items: center;
@@ -38,19 +54,16 @@
     font-family: 'Oswald', sans-serif;
 
 }
-
 .header .logo {
     width: 30px;
     height: auto;
     margin-right: 10px;
 }
-
 .header .nav-link {
     color: white !important;
     font-weight: bold;
     font-size: 25px;
 }
-
 .header .nav-link:hover {
     color: #ffc107 !important;
 }
