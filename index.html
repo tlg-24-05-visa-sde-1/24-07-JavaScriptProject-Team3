@@ -38,8 +38,9 @@
             </ul>
         </div>
     </div>
-</nav>
-    
+    </nav>
+
+    <!-- Translate -->
     <div id="translation" class="card">
         <h2>Translate Text</h2>
         <div class="translation-container">
@@ -58,12 +59,30 @@
         </div>
         <button id="translate-button">Translate</button>
     </div>
-    <script type="module" src="./modules/main.js"></script>
+
+    <!-- Food -->
+    <div id="food" class="card">
+        <h2>Find Some Food</h2>
+        <div class="food-container">
+            <input type="text" id="countryInput" placeholder="Enter country name">
+        <button onclick="getCuisines()">Get Cuisines</button>
+        <div class="image-container">
+            <div class="image-title" id="imageTitle"></div>
+            <img id="recipeImage" src="" alt="Recipe Image">
+        </div>
+        <ul id="recipeList" class="recipe-list"></ul>
+        <ul id="cuisineList" class="cuisine-list" style="display: none;"></ul>
+        </div>
+    </div>
+    
+   
 
     <!-- Footer -->
     <div class="footer text-center">
         <p>&copy; WanderWise</p>
         <p> Created by the talented Clayton Yan, Coty Woodside, Daiyron Williams, and Jakira Dunson.</p>
     </div>
+
+    <script type="module" src="./modules/main.js"></script>
 </body>
 </html>
