@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel App</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Search Attractions by Country</h1>
+    <input type="text" id="country" placeholder="Enter country" />
+    <button id="search-button">Search</button>
+    <div id="results"></div>
+    <!-- 
+    <h2>Search for Historical Facts</h2>
+    <input type="text" id="country" placeholder="Enter country name" />
+    <button onclick="searchFacts()">Search</button>
+    <div id="results"></div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./modules/main.js"></script>
-</body>
+    <script type="module" src="./modules/history.js"></script>
+    <script type="module" src="./modules/attractions.js"></script>
+  </body>
 </html>
