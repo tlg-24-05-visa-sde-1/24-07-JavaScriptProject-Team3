@@ -1,5 +1,79 @@
 /* styles sheet */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header Styles */
+.header .logo {
+    width: 190px !important; /* Adjust the width to shrink the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+.header {
+    background: linear-gradient(90deg, #007bff, #00c853);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+.header .logo {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header .nav-link {
+    color: white !important;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 .logo {
     width: 30px; /* Adjust the width to shrink the logo */
     height: auto; /* Maintain aspect ratio */
