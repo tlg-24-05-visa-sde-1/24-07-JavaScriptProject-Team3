@@ -1,4 +1,5 @@
-async function sendMessage() {
+export async function sendMessage() {
+  console.log("sendMessage function called"); // Debugging
   const userInput = document.getElementById("user-input").value;
   if (!userInput) return;
 
@@ -7,7 +8,7 @@ async function sendMessage() {
   userMessage.className = "message user";
   userMessage.textContent = userInput;
   chatBox.appendChild(userMessage);
-  const subkey = "";
+  const subkey = "sk-svcacct-";
 
   document.getElementById("user-input").value = "";
 
