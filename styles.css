@@ -1,93 +1,156 @@
 /* styles sheet */
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
 
+.left-column {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.right-column {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
 
+.card {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.translation-container,
+.food-container,
+#chat-container {
+  margin-top: 10px;
+}
 
+.translation-box,
+.food-container input,
+.food-container button,
+#user-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+textarea {
+  width: 100%;
+  height: 100px;
+}
 
+/* Transport styles*/
 
+#chat-container {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
 
+#chat-box {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
+.message {
+  margin-bottom: 10px;
+}
 
+.user {
+  text-align: right;
+  color: blue;
+}
 
-
-
-
-
-
-
+.bot {
+  text-align: left;
+  color: green;
+}
 
 /* Food Styles */
 .food-container {
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    min-height: 400px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: linear-gradient(to right, #cce5ff, #d4edda); /* Light blue to green gradient */
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  min-height: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: linear-gradient(
+    to right,
+    #cce5ff,
+    #d4edda
+  ); /* Light blue to green gradient */
 }
 #recipeImage {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 300px;
-    display: none;
-    border-radius: 8px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  display: none;
+  border-radius: 8px;
 }
 
 /* Header Styles */
 .header .logo {
-    width: 190px !important; /* Adjust the width to shrink the logo */
-    height: auto; /* Maintain aspect ratio */
+  width: 190px !important; /* Adjust the width to shrink the logo */
+  height: auto; /* Maintain aspect ratio */
 }
 .header {
-    background: linear-gradient(90deg, #007bff, #00c853);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #007bff, #00c853);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header .navbar-brand {
-    display: flex;
-    align-items: center;
-    font-size: 40px;
-    font-family: 'Oswald', sans-serif;
-
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
 }
 .header .logo {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
 }
 .header .nav-link {
-    color: white !important;
-    font-weight: bold;
-    font-size: 25px;
+  color: white !important;
+  font-weight: bold;
+  font-size: 25px;
 }
 .header .nav-link:hover {
-    color: #ffc107 !important;
+  color: #ffc107 !important;
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer p {
-    margin: 0;
-    font-size: 14px;
+  margin: 0;
+  font-size: 14px;
 }
 
 .footer p:first-child {
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 .logo {
-    width: 30px; /* Adjust the width to shrink the logo */
-    height: auto; /* Maintain aspect ratio */
+  width: 30px; /* Adjust the width to shrink the logo */
+  height: auto; /* Maintain aspect ratio */
 }
