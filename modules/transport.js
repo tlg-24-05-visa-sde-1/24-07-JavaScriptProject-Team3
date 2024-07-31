@@ -7,6 +7,7 @@ async function sendMessage() {
   userMessage.className = "message user";
   userMessage.textContent = userInput;
   chatBox.appendChild(userMessage);
+  const subkey = "";
 
   document.getElementById("user-input").value = "";
 
@@ -16,7 +17,7 @@ async function sendMessage() {
     headers: {
       "Content-Type": "application/json",
       // removed key
-      Authorization: `Bearer removed for now`,
+      Authorization: `Bearer ${subkey}`,
     },
     // body of request
     body: JSON.stringify({
