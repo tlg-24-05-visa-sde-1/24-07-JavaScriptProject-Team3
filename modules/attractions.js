@@ -99,6 +99,6 @@ export async function searchAttractions() {
   }
 }
 
-document
-  .getElementById("search-button")
-  .addEventListener("click", searchAttractions);
+// document
+//   .getElementById("search-button")
+//   .addEventListener("click", searchAttractions);
