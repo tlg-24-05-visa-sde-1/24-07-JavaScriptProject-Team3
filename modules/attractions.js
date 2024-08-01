@@ -1,4 +1,4 @@
-async function searchAttractions() {
+export async function searchAttractions() {
   const country = document.getElementById("country").value;
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";

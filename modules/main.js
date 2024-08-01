@@ -1,15 +1,42 @@
+import { getCuisines } from './food.js';
+import { initTranslation, translateText } from './translation.js';
+import { sendMessage } from './transport.js';
+import { searchAttractions } from './attractions.js';
 
-import { initTranslation, translateText } from './translation.js';  // Import translation functions. D.W
+document.addEventListener('DOMContentLoaded', () => {
+    initTranslation();
 
-// Add event listener to the translate button. D.W
-document.getElementById('translate-button').addEventListener('click', () => {
-    const text = document.getElementById('translate-input').value;  // Get the input text. D.W
-    const sourceLanguage = document.getElementById('from-language-select').value;  // Get the source language. D.W
-    const targetLanguage = document.getElementById('to-language-select').value;  // Get the target language. D.W
-    if (text && targetLanguage) {
-        translateText(text, sourceLanguage, targetLanguage);  // Call the translate function. D.W
+    const translateButton = document.getElementById('translate-button');
+    const cuisineSearchButton = document.getElementById('cuisine-search-button');
+    const searchButton = document.getElementById('search-button');
+    const chatButton = document.getElementById('chat-button');
+
+    if (translateButton) {
+        translateButton.addEventListener('click', () => {
+            const text = document.getElementById('translate-input').value;
+            const sourceLanguage = document.getElementById('from-language-select').value;
+            const targetLanguage = document.getElementById('to-language-select').value;
+            if (text && targetLanguage) {
+                translateText(text, sourceLanguage, targetLanguage);
+            }
+        });
+    }
+
+    if (cuisineSearchButton) {
+        cuisineSearchButton.addEventListener('click', () => {
+            getCuisines();
+        });
+    }
+
+    if (searchButton) {
+        searchButton.addEventListener('click', () => {
+            searchAttractions();
+        });
+    }
+
+    if (chatButton) {
+        chatButton.addEventListener('click', () => {
+            sendMessage();
+        });
     }
 });
-
-// Initialize the translation module when the DOM content is loaded. D.W
-document.addEventListener('DOMContentLoaded', initTranslation);
