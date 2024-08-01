@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  background: linear-gradient(to bottom, #2f1c7b, #910eb9);
+  background: linear-gradient(to right, #2d0f37, #b55dbb);
 }
 
 .left-column {
@@ -25,7 +25,7 @@
 }
 
 .card {
-  background: #a232b9;
+  background: #caa5c9;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -54,7 +54,7 @@ textarea {
 /* Transport styles*/
 
 #chat-container {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 400px;
@@ -93,8 +93,8 @@ textarea {
   border-radius: 8px;
   background: linear-gradient(
     /* Light blue to green gradient */ to right,
-    #cce5ff,
-    #d4edda
+    #e4b4b4,
+    #787884
   );
 }
 #recipeImage {
@@ -111,7 +111,7 @@ textarea {
   height: auto; /* Maintain aspect ratio */
 }
 .header {
-  background: linear-gradient(90deg, #2f1c7b, #b336b1);
+  background: linear-gradient(90deg, #8f19c7, #c6a729);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header .navbar-brand {
@@ -154,7 +154,7 @@ textarea {
 
 /* Footer Styles */
 .footer {
-  background-color: #343a40;
+  background-color: #3b254a;
   color: white;
   padding: 20px 0;
   position: relative;
