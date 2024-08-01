@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translateButton = document.getElementById('translate-button');
     const cuisineSearchButton = document.getElementById('cuisine-search-button');
     const searchButton = document.getElementById('search-button');
-    const chatButton = document.getElementById('chat-button');
+    const getDirectionsButton = document.getElementById('get-directions-button');
 
     if (translateButton) {
         translateButton.addEventListener('click', () => {
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (chatButton) {
-        chatButton.addEventListener('click', () => {
+    if (getDirectionsButton) {
+        getDirectionsButton.addEventListener('click', () => {
             sendMessage();
         });
     }
