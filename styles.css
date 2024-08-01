@@ -87,23 +87,31 @@ textarea {
 }
 
 /* Food Styles */
-.food-container {
-  text-align: center;
+.food-container
+{
   width: 100%;
   max-width: 600px;
   min-height: 400px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
-  background: linear-gradient(to right, #2a006c, #3c1c6e);
+  
+  background: linear-gradient(
+    to right,
+    #2a006c,
+    #3c1c6e
+  );
 }
-#cuisine-search-button {
-  background: #edadab;
+
+#cuisine-search-button{
+  background: #EDADAB;
   color: #2a006c;
-  padding: 10px 20px;
-  border-radius: 9px;
-  cursor: pointer;
+  padding: 10px 20px; 
+  border-radius: 9px; 
+  cursor: pointer; 
+  font-weight: bold;
 }
+
 #cuisine-search-button:hover {
   background: #d89a8f;
   color: #1a004d;
@@ -119,9 +127,11 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: black;
 }
+
 .recipe-list li,
 .cuisine-list li {
   color: white;
+
   padding: 10px;
   border-bottom: 1px solid #ddd;
   list-style-type: none;
@@ -189,7 +199,7 @@ textarea {
 
 /* Footer Styles */
 .footer {
-  background-color: #3b254a;
+  background-color: #33203f;
   color: white;
   padding: 20px 0;
   position: relative;
