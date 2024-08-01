@@ -25,7 +25,7 @@
 }
 
 .card {
-  background: #EDADAB;
+  background: #edadab;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -33,8 +33,7 @@
   color: #2a006c !important;
   font-weight: bold;
   font-size: 30px;
-  text-shadow:rgba(0, 0, 0, 2.0)
-  
+  text-shadow: rgba(0, 0, 0, 2);
 }
 
 .translation-container,
@@ -62,11 +61,11 @@ textarea {
   background: #ffffff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 700px;
 }
 
 #chat-box {
-  height: 200px;
+  height: 300px;
   overflow-y: auto;
   border: 1px solid #ddd;
   padding: 10px;
@@ -96,6 +95,7 @@ textarea {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
+  
   background: linear-gradient(
     to right,
     #2a006c,
@@ -110,12 +110,11 @@ textarea {
   border-radius: 9px; 
   cursor: pointer; 
   font-weight: bold;
-
 }
 
 #cuisine-search-button:hover {
-  background: #d89a8f; 
-  color: #1a004d; 
+  background: #d89a8f;
+  color: #1a004d;
 }
 
 #recipeImage {
@@ -127,19 +126,21 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: black;
-  
 }
 
-.recipe-list li, .cuisine-list li {
-  color: white; 
+.recipe-list li,
+.cuisine-list li {
+  color: white;
+
   padding: 10px;
   border-bottom: 1px solid #ddd;
   list-style-type: none;
 }
 
-.recipe-list li:hover, .cuisine-list li:hover {
-  background-color: #2a006c; 
-  color: #fff; 
+.recipe-list li:hover,
+.cuisine-list li:hover {
+  background-color: #2a006c;
+  color: #fff;
   list-style-type: none;
 }
 
@@ -155,7 +156,7 @@ textarea {
   height: auto; /* Maintain aspect ratio */
 }
 .header {
-  background: linear-gradient(90deg, #EDADAB, #EDADAB);
+  background: linear-gradient(90deg, #edadab, #edadab);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
 }
 .header .navbar-brand {
@@ -171,7 +172,6 @@ textarea {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Add shadow */
   transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
   border-radius: 8px;
-
 }
 .header .logo:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 1.4); /* Enhanced shadow on hover */
@@ -182,7 +182,7 @@ textarea {
   font-size: 25px;
   padding: 10px 20px;
   background-color: #2a006c;
-  border: 4px solid  #8400ff;
+  border: 4px solid #8400ff;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
@@ -206,7 +206,6 @@ textarea {
   bottom: 0;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-
 }
 
 .footer p {
