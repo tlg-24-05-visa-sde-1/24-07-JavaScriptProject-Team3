@@ -8,7 +8,6 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="./styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
@@ -93,17 +92,13 @@
               id="countryInput"
               placeholder="Enter country name"
             />
-            <button onclick="getCuisines()">Get Cuisines</button>
+            <button id="cuisine-search-button">Get Cuisines</button>
             <div class="image-container">
               <div class="image-title" id="imageTitle"></div>
               <img id="recipeImage" src="" alt="Recipe Image" />
             </div>
             <ul id="recipeList" class="recipe-list"></ul>
-            <ul
-              id="cuisineList"
-              class="cuisine-list"
-              style="display: none"
-            ></ul>
+            <ul id="cuisineList" class="cuisine-list" style="display: none"></ul>
           </div>
         </div>
       </div>
@@ -140,7 +135,6 @@
       </p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="./modules/attractions.js"></script>
     <script type="module" src="./modules/main.js"></script>
   </body>
 </html>

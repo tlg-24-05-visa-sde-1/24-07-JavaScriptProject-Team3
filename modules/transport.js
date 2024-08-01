@@ -1,5 +1,4 @@
 export async function sendMessage() {
-  console.log("sendMessage function called"); // Debugging
   const userInput = document.getElementById("user-input").value;
   if (!userInput) return;
 
