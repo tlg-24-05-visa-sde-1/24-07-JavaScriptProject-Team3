@@ -34,7 +34,6 @@
   font-weight: bold;
   font-size: 30px;
   text-shadow:rgba(0, 0, 0, 2.0)
-
   
 }
 
@@ -98,7 +97,7 @@ textarea {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
   background: linear-gradient(
-    /* Light blue to green gradient */ to right,
+    to right,
     #2a006c,
     #3c1c6e
   );
@@ -106,14 +105,14 @@ textarea {
 #cuisine-search-button{
   background: #EDADAB;
   color: #2a006c;
-  padding: 10px 20px; /* Add padding */
-  border-radius: 9px; /* Optional: Add rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 10px 20px; 
+  border-radius: 9px; 
+  cursor: pointer; 
 
 }
 #cuisine-search-button:hover {
-  background: #d89a8f; /* Change background color on hover */
-  color: #1a004d; /* Change text color on hover */
+  background: #d89a8f; 
+  color: #1a004d; 
 }
 
 #recipeImage {
@@ -128,14 +127,16 @@ textarea {
   
 }
 .recipe-list li, .cuisine-list li {
-  color: white; /* Text color for list items */
+  color: white; 
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  list-style-type: none;
 }
 
 .recipe-list li:hover, .cuisine-list li:hover {
-  background-color: #2a006c; /* Background color on hover */
-  color: #fff; /* Text color on hover */
+  background-color: #2a006c; 
+  color: #fff; 
+  list-style-type: none;
 }
 
 .image-title {
@@ -146,12 +147,12 @@ textarea {
 
 /* Header Styles */
 .header .logo {
-  width: 190px !important;
+  width: 245px !important;
   height: auto; /* Maintain aspect ratio */
 }
 .header {
   background: linear-gradient(90deg, #EDADAB, #EDADAB);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
 }
 .header .navbar-brand {
   display: flex;
@@ -168,7 +169,6 @@ textarea {
   border-radius: 8px;
 
 }
-
 .header .logo:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 1.4); /* Enhanced shadow on hover */
 }
@@ -201,6 +201,8 @@ textarea {
   position: relative;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+
 }
 
 .footer p {
@@ -211,8 +213,4 @@ textarea {
 .footer p:first-child {
   font-weight: bold;
   margin-bottom: 5px;
-}
-.logo {
-  width: 30px; /* Adjust the width to shrink the logo */
-  height: auto; /* Maintain aspect ratio */
 }
