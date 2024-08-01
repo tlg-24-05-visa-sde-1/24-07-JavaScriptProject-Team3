@@ -8,7 +8,6 @@
   gap: 20px;
   padding: 20px;
   background: linear-gradient(to bottom, #2f1c7b, #910eb9);
-
 }
 
 .left-column {
@@ -16,13 +15,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .right-column {
   flex: 1 1 300px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .card {
@@ -31,7 +30,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Add shadow */
-
 }
 
 .translation-container,
@@ -93,11 +91,11 @@ textarea {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background: linear-gradient( /* Light blue to green gradient */
-    to right,
+  background: linear-gradient(
+    /* Light blue to green gradient */ to right,
     #cce5ff,
     #d4edda
-  ); 
+  );
 }
 #recipeImage {
   margin-top: 20px;
@@ -109,7 +107,7 @@ textarea {
 
 /* Header Styles */
 .header .logo {
-  width: 190px !important; 
+  width: 190px !important;
   height: auto; /* Maintain aspect ratio */
 }
 .header {
@@ -121,7 +119,6 @@ textarea {
   align-items: center;
   font-size: 40px;
   font-family: "Oswald", sans-serif;
-
 }
 .header .logo {
   width: 35px;
@@ -138,16 +135,15 @@ textarea {
   color: white !important;
   font-weight: bold;
   font-size: 25px;
-  padding: 10px 20px; 
-  background-color: #8400ff; 
-  border: 4px solid #a600ff; 
-  border-radius: 5px; 
-  text-align: center; 
-  display: inline-block; 
-  margin: 5px; 
+  padding: 10px 20px;
+  background-color: #8400ff;
+  border: 4px solid #a600ff;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Add shadow */
-
 }
 
 .header .nav-link:hover {
@@ -155,7 +151,6 @@ textarea {
   color: #ffffff !important; /* Change text color on hover */
   border-color: #b909e5; /* Change border color on hover */
 }
-
 
 /* Footer Styles */
 .footer {
