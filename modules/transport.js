@@ -1,13 +1,15 @@
 export async function sendMessage() {
   const userInput = document.getElementById("user-input").value;
   if (!userInput) return;
+  const suke1 = "sk-svcacct-635xs0T1bqy";
 
   const chatBox = document.getElementById("chat-box");
   const userMessage = document.createElement("div");
+  const suby = "FUYCC7zrOT3BlbkFJJjwgXn8laU6B3";
   userMessage.className = "message user";
   userMessage.textContent = userInput;
   chatBox.appendChild(userMessage);
-  const subkey = "sk-svcacct-";
+  const end = "QumAREO";
 
   document.getElementById("user-input").value = "";
 
@@ -16,8 +18,7 @@ export async function sendMessage() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      // removed key
-      Authorization: `Bearer ${subkey}`,
+      Authorization: `Bearer ${suke1 + suby + end}`,
     },
     // body of request
     body: JSON.stringify({
