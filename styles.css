@@ -37,9 +37,10 @@
 }
 
 .translation-container,
-.food-container,
-#chat-container {
+.food-container
+ {
   margin-top: 10px;
+  margin-bottom: 53px;
 }
 
 .translation-box,
