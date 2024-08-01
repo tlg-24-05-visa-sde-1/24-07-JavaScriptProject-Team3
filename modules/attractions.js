@@ -3,7 +3,6 @@ export async function searchAttractions() {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
 
-  // Fetch attractions based on country
   const url = `https://travel-advisor.p.rapidapi.com/locations/search`;
   const options = {
     method: "GET",
@@ -22,84 +21,79 @@ export async function searchAttractions() {
   };
 
   try {
-    // const response = await fetch(url, options);
-    // const data = await response.text();
-
-    //const response = await axios(options); //sending get Request
-
-    const response = await axios(options); //sending get Request
-    const travelData = response.data.data; //to be able to reference the arrays
+    const response = await axios(options);
+    const travelData = response.data.data;
 
     const attractions = travelData.filter(
       (elt) => elt.result_type === "things_to_do"
     );
-    const restaurants = travelData.filter(
-      (elt) => elt.result_type === "restaurants"
-    );
-    const hotels = travelData.filter((elt) => elt.result_type === "lodging");
-    console.log(attractions);
-    console.log(restaurants);
-    console.log(hotels);
 
     if (attractions.length > 0) {
       const attractionHeader = document.createElement("h2");
       attractionHeader.textContent = "Attractions";
       resultsDiv.appendChild(attractionHeader);
 
-      attractions.forEach((attraction) => {
-        const div = document.createElement("div");
-        div.className = "attraction";
-        div.innerHTML = `
-                            <h3>${attraction.result_object.name}</h3>
-                            <p>${attraction.result_object.location_string}</p>
-                            <img src="${
-                              attraction.result_object.photo?.images?.small
-                                ?.url || "https://via.placeholder.com/100"
-                            }" alt="${attraction.result_object.name}">
-                        `;
-        resultsDiv.appendChild(div);
+      const carousel = document.createElement("div");
+      carousel.id = "carouselExampleIndicators";
+      carousel.className = "carousel slide";
+      carousel.setAttribute("data-ride", "carousel");
+
+      const carouselIndicators = document.createElement("ol");
+      carouselIndicators.className = "carousel-indicators";
+
+      const carouselInner = document.createElement("div");
+      carouselInner.className = "carousel-inner";
+
+      attractions.forEach((attraction, index) => {
+        const carouselItem = document.createElement("div");
+        carouselItem.className = `carousel-item ${index === 0 ? "active" : ""}`;
+        carouselItem.innerHTML = `
+          <img src="${
+            attraction.result_object.photo?.images?.small?.url ||
+            "https://via.placeholder.com/100"
+          }" class="d-block w-100" alt="${attraction.result_object.name}">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>${attraction.result_object.name}</h5>
+            <p>${attraction.result_object.location_string}</p>
+          </div>
+        `;
+        carouselInner.appendChild(carouselItem);
+
+        const indicator = document.createElement("li");
+        indicator.setAttribute("data-target", "#carouselExampleIndicators");
+        indicator.setAttribute("data-slide-to", index);
+        if (index === 0) indicator.className = "active";
+        carouselIndicators.appendChild(indicator);
       });
+
+      carousel.appendChild(carouselIndicators);
+      carousel.appendChild(carouselInner);
+
+      const carouselControlPrev = document.createElement("a");
+      carouselControlPrev.className = "carousel-control-prev";
+      carouselControlPrev.href = "#carouselExampleIndicators";
+      carouselControlPrev.setAttribute("role", "button");
+      carouselControlPrev.setAttribute("data-slide", "prev");
+      carouselControlPrev.innerHTML = `
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      `;
+
+      const carouselControlNext = document.createElement("a");
+      carouselControlNext.className = "carousel-control-next";
+      carouselControlNext.href = "#carouselExampleIndicators";
+      carouselControlNext.setAttribute("role", "button");
+      carouselControlNext.setAttribute("data-slide", "next");
+      carouselControlNext.innerHTML = `
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      `;
+
+      carousel.appendChild(carouselControlPrev);
+      carousel.appendChild(carouselControlNext);
+
+      resultsDiv.appendChild(carousel);
     }
-
-    // if (restaurants.length > 0) {
-    //   const restaurantHeader = document.createElement("h2");
-    //   restaurantHeader.textContent = "Restaurants ";
-    //   resultsDiv.appendChild(restaurantHeader);
-
-    //   restaurants.forEach((restaurant) => {
-    //     const div = document.createElement("div");
-    //     div.className = "Restaurants";
-    //     div.innerHTML = `
-    //                       <h3>${restaurants.result_object.name}</h3>
-    //                       <p>${restaurants.result_object.location_string}</p>
-    //                       <img src="${
-    //                         restaurants.result_object.photo?.images?.small
-    //                           ?.url || "https://via.placeholder.com/100"
-    //                       }" alt="${attraction.result_object.name}">
-    //                   `;
-    //     resultsDiv.appendChild(div);
-    //   });
-    // }
-
-    // if (hotels.length > 0) {
-    //   const hotelHeader = document.createElement("h2");
-    //   hotelHeader.textContent = "Hotels";
-    //   resultsDiv.appendChild(hotelHeader);
-
-    //   hotels.forEach((hotel) => {
-    //     const div = document.createElement("div");
-    //     div.className = "Hotel";
-    //     div.innerHTML = `
-    //                         <h3>${hotels.result_object.names}</h3>
-    //                         <p>${hotels.result_object.location_string}</p>
-    //                         <img src="${
-    //                           hotels.result_object.photo?.images?.small?.url ||
-    //                           "https://via.placeholder.com/100"
-    //                         }" alt="${attraction.result_object.name}">
-    //                     `;
-    //     resultsDiv.appendChild(div);
-    //   });
-    // }
   } catch (error) {
     console.error("Error fetching data:", error);
   }
