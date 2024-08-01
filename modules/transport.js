@@ -7,7 +7,7 @@ export async function sendMessage() {
   userMessage.className = "message user";
   userMessage.textContent = userInput;
   chatBox.appendChild(userMessage);
-  const subkey = "";
+  const subkey = "sk-svcacct-";
 
   document.getElementById("user-input").value = "";
 
