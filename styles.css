@@ -106,7 +106,7 @@ textarea {
 
 #cuisine-search-button{
   background: #EDADAB;
-  color: #2a006c;
+  color: #ece4e4;
   padding: 10px 20px; 
   border-radius: 9px; 
   cursor: pointer; 
@@ -114,7 +114,7 @@ textarea {
 }
 
 #cuisine-search-button:hover {
-  background: #d89a8f;
+  background: #cd9287;
   color: #1a004d;
 }
 
@@ -183,7 +183,7 @@ textarea {
   font-size: 25px;
   padding: 10px 20px;
   background-color: #2a006c;
-  border: 4px solid #8400ff;
+  border: 1px solid #8400ff;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
@@ -193,9 +193,9 @@ textarea {
 }
 
 .header .nav-link:hover {
-  background-color: #8901d3; /* Darker background color on hover */
-  color: #ffffff !important; /* Change text color on hover */
-  border-color: #b909e5; /* Change border color on hover */
+  background-color: #edadab; /* Darker background color on hover */
+  color: #2a006c !important; /* Change text color on hover */
+  border: 4px solid #2a006c;  /* Change border color on hover */
 }
 
 /* Footer Styles */

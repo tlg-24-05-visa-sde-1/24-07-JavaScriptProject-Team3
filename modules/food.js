@@ -21,14 +21,14 @@ export function getCuisines() {
 
 // Displays the recipes if the function finds them in the API
 function displayRecipes(recipes) {
-    const recipeList = document.getElementById('recipeList');  //get the list
-    const recipeImage = document.getElementById('recipeImage'); // grab the image
-    const imageTitle = document.getElementById('imageTitle');   // get the image title
-    const cuisineList = document.getElementById('cuisineList'); // cuise list element
-    recipeList.innerHTML = '';              //clear the current recipe list
-    cuisineList.style.display = 'none';     // hide the cuisine list
-    recipeImage.style.display = 'none';     // hide recipe image
-    imageTitle.textContent = '';            //clear the image title
+    const recipeList = document.getElementById('recipeList');  //get the info
+    const recipeImage = document.getElementById('recipeImage'); 
+    const imageTitle = document.getElementById('imageTitle');   
+    const cuisineList = document.getElementById('cuisineList'); 
+    recipeList.innerHTML = '';              //clear everything
+    cuisineList.style.display = 'none';     
+    recipeImage.style.display = 'none';     
+    imageTitle.textContent = '';            
 
     if (recipes.length === 0) {   // this is a message to display if no recipes are found
         recipeList.innerHTML = '<li>No recipes found. Please try another search.</li>';
@@ -38,21 +38,21 @@ function displayRecipes(recipes) {
     recipes.forEach((recipe, index) => {  //loop through recipes
         const listItem = document.createElement('li'); //create a list
         listItem.textContent = recipe.title;  //list item as the recipe title
-        listItem.dataset.image = recipe.image;  //store the image
-        listItem.dataset.title = recipe.title;  //store the title
-        listItem.addEventListener('click', () => {  //add an event listener to listed items
-            recipeImage.src = recipe.image;         //set the image 
-            recipeImage.style.display = 'block';        //display the image in block
-            imageTitle.textContent = recipe.title;  //set the image title
+        listItem.dataset.image = recipe.image;  
+        listItem.dataset.title = recipe.title;  
+        listItem.addEventListener('click', () => {  //add an event listener
+            recipeImage.src = recipe.image;         //image info
+            recipeImage.style.display = 'block';        
+            imageTitle.textContent = recipe.title;  
         });
 
         recipeList.appendChild(listItem);       //add list item to recipe list
 
-        // Create the initial image block
+        // Create the image
         if (index === 0) {  
             recipeImage.src = recipe.image;
             recipeImage.style.display = 'block';
-            imageTitle.textContent = recipe.title;  //set image title
+            imageTitle.textContent = recipe.title;  
         }
     });
 }
@@ -60,9 +60,9 @@ function displayRecipes(recipes) {
 // Display the list of cuisines if a recipe isn't returned
 function displayCuisines(cuisines) {
     const cuisineList = document.getElementById('cuisineList'); //get cuisine list
-    const recipeList = document.getElementById('recipeList');   // get recipe list
-    cuisineList.innerHTML = '';     //clear cuisine list
-    recipeList.innerHTML = '';      //clear recipe list
+    const recipeList = document.getElementById('recipeList');   
+    cuisineList.innerHTML = '';     //clear screen
+    recipeList.innerHTML = '';      
     cuisineList.style.display = 'block';  //display cuisine list
 
     if (cuisines.length === 0) {  //display if no cuisine found
@@ -73,12 +73,12 @@ function displayCuisines(cuisines) {
     // Make each cuisine clickable, which should return a new list of recipes
     cuisines.forEach(cuisine => {
         const listItem = document.createElement('li');  //create list
-        listItem.textContent = cuisine; //set list item text to cuisine name
+        listItem.textContent = cuisine; 
         listItem.addEventListener('click', () => {  //add event listener
             fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${cuisine}&number=5&addRecipeInformation=true&apiKey=${apiKey}`)
                 .then(response => response.json())  //fetch data from the API
                 .then(data => displayRecipes(data.results))  //diplsy recipes
-                .catch(error => console.error('Error:', error));  //log errors
+                .catch(error => console.error('Error:', error));  
         });
 
         cuisineList.appendChild(listItem); //add list item to cuisine list
